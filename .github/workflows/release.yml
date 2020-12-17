@@ -25,6 +25,6 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Publish package
-        run: ./gradlew api:publish -Preckon.stage=${{ github.event.inputs.stage }} -Preckon.scope=${{ github.event.inputs.scope }}
+        run: ./gradlew api:publish reckonTagPush -Preckon.stage=${{ github.event.inputs.stage }} -Preckon.scope=${{ github.event.inputs.scope }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
