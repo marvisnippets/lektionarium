@@ -21,6 +21,6 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Grant execute permission for gradlew
-      run: git tag
+      run: git tag -l
     - name: Build with Gradle
-      run: ./gradlew --debug test
+      run: ./gradlew test
