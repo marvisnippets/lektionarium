@@ -20,7 +20,7 @@ jobs:
         java-version: 1.8
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: Grant execute permission for gradlew
-      run: git tag -l
+    - name: Git tags
+      run: echo "Git tags: $(git tag -l)"
     - name: Build with Gradle
       run: ./gradlew test
